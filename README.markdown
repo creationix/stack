@@ -4,6 +4,14 @@ Stack is a minimal http module system for node.js.
 
 Basically it's the core idea of connect but in a standalone and super minimal stack function.
 
+## Install
+
+If you use npm, then install stack via npm.  Also, remember to put it as a dependency in your own project's package.json file.
+
+    npm install stack
+
+If you don't use npm (Like you're on a phone), then simply copy the single file `stack.js` somewhere you can get to it.
+
 ## Example
 
   http.createServer(require('stack')(
@@ -11,6 +19,8 @@ Basically it's the core idea of connect but in a standalone and super minimal st
     require('staticMiddleware')(root, mount),
     //...
   )).listen(8080);
+
+## Explanation
 
 As you can see, it takes a list of handler functions and will chain them up for you.
 
