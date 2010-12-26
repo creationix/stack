@@ -14,11 +14,11 @@ If you don't use npm (Like you're on a phone), then simply copy the single file 
 
 ## Example
 
-  http.createServer(require('stack')(
-    require('loggerMiddleware')(),
-    require('staticMiddleware')(root, mount),
-    //...
-  )).listen(8080);
+    http.createServer(require('stack')(
+      require('loggerMiddleware')(),
+      require('staticMiddleware')(root, mount),
+      //...
+    )).listen(8080);
 
 ## Explanation
 
