@@ -47,7 +47,7 @@ Besides providing this nice linear syntax for defining http handler layers Stack
 
  - Wraps each layer in a `try..catch` to catch any exceptions that happen in the main execution stack layer's handler function.
  - Provides a fallthrough error handler function that returns 404 for routes that fall through all the layers and 500 responses for exceptions.
-   (In the future, I want to be able to override this function.)
+   (You can override this at Stack.errorHandler, if for example, you don't like showing stack traces for all errors or want to pretty it up a bit)
  - Forwards and exceptions passed to any next layer directly to the error handler.  This means layers don't have to worry about errors from previous layers.
 
 ## What Stack Does NOT Do
