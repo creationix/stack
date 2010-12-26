@@ -18,7 +18,7 @@ function Stack(/*layers*/) {
 }
 Stack.errorHandler = function error(req, res, err) {
   if (err) {
-    console.error(err.stack + "\n");
+    console.error(err.stack);
     res.writeHead(500, {"Content-Type": "text/plain"});
     res.end(err.stack + "\n");
     return;
