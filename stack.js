@@ -1,15 +1,16 @@
 function Stack(/*layers*/) {
-  var handle = Stack.error;
+  var error = Stack.errorHandler,
+      handle = error;
   Array.prototype.slice.call(arguments).reverse().forEach(function (layer) {
     var child = handle;
     handle = function (req, res) {
       try {
         layer(req, res, function (err) {
-          if (err) { return Stack.error(req, res, err); }
+          if (err) { return error(req, res, err); }
           child(req, res);
         });
       } catch (err) {
-        Stack.error(req, res, err);
+        error(req, res, err);
       }
     };
   });
@@ -17,6 +18,7 @@ function Stack(/*layers*/) {
 }
 Stack.errorHandler = function error(req, res, err) {
   if (err) {
+    console.error(err.stack + "\n");
     res.writeHead(500, {"Content-Type": "text/plain"});
     res.end(err.stack + "\n");
     return;

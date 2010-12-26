@@ -2,7 +2,7 @@
   "name": "stack",
   "description": "Stack is a minimal http module system for node.js",
   "tags": ["connect", "middleware", "stack", "http"],
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Tim Caswell <tim@creationix.com>",
   "repository": {
     "type": "git",
