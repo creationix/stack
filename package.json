@@ -1,0 +1,14 @@
+{
+  "name": "stack",
+  "description": "Stack is a minimal http module system for node.js",
+  "tags": ["connect", "middleware", "stack", "http"],
+  "version": "0.0.1",
+  "author": "Tim Caswell <tim@creationix.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/creationix/stack.git"
+  },
+  "bugs": "http://github.com/creationix/stack/issues",
+  "engines": ["node >= 0.2.0"],
+  "main": "stack.js"
+}
